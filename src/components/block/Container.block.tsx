@@ -214,11 +214,6 @@ const DoubleAVContainer = ({
 	const dispatch = useAppDispatch();
 
 	const containerList = useAppSelector((state) => state.container.value);
-	const actionList = useAppSelector((state) => state.action.value);
-
-	const totalActionItem = actionList.filter(
-		(action) => action.containerId === id
-	);
 
 	const [{ isOver }, drop] = useDrop(
 		() => ({
